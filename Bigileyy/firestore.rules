@@ -1,0 +1,77 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function getUserData() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data;
+    }
+
+    function hasRole(role) {
+      return isAuthenticated() && getUserData().role == role;
+    }
+
+    function isAdmin() {
+      return hasRole('Admin');
+    }
+
+    function isStaff() {
+      return hasRole('Staff') || isAdmin();
+    }
+
+    function isViewer() {
+      return isAuthenticated();
+    }
+
+    // 1. Users collection
+    match /users/{userId} {
+      allow read: if isAuthenticated();
+      allow create, update, delete: if isAdmin();
+    }
+
+    // 2. Bins collection
+    match /bins/{binId} {
+      allow read: if isViewer();
+      allow create, delete: if isAdmin();
+      allow update: if isStaff();
+    }
+
+    // 3. IoT Hardware Devices
+    match /devices/{deviceId} {
+      allow read: if isStaff();
+      allow create, update, delete: if isAdmin();
+    }
+
+    // 4. Sensor Readings (Time-series telemetry)
+    match /readings/{readingId} {
+      allow read: if isViewer();
+      // Only server backend with service account or authenticated node can write
+      allow create: if isAuthenticated();
+      allow update, delete: if isAdmin();
+    }
+
+    // 5. Alerts & Notifications
+    match /alerts/{alertId} {
+      allow read: if isViewer();
+      allow update: if isStaff(); // Staff can acknowledge and resolve
+      allow create, delete: if isAdmin();
+    }
+
+    // 6. Municipal Collection Records
+    match /collections/{collectionId} {
+      allow read: if isViewer();
+      allow create: if isStaff(); // Drivers/operators can record collections
+      allow update, delete: if isAdmin();
+    }
+
+    // 7. System Settings
+    match /settings/{docId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+  }
+}

@@ -1,0 +1,448 @@
+{
+  "settings": {
+    "thresholdAlmostFull": 70,
+    "thresholdFull": 90,
+    "offlineTimeoutMinutes": 15,
+    "enableBrowserNotifications": true,
+    "enableEmailAlerts": false,
+    "autoDispatchCollection": true,
+    "lastUpdated": "2026-10-22T15:24:39.575Z"
+  },
+  "users": [
+    {
+      "id": "USR-ADMIN-01",
+      "email": "admin@municipal.gov.in",
+      "name": "Rajesh Sharma (Director of Sanitation)",
+      "role": "Admin",
+      "department": "Solid Waste Management Directorate",
+      "phone": "+91 98765 43210",
+      "createdAt": "2026-01-15T08:00:00.000Z"
+    },
+    {
+      "id": "USR-STAFF-01",
+      "email": "staff@municipal.gov.in",
+      "name": "Ananya Deshmukh (Fleet Supervisor)",
+      "role": "Staff",
+      "department": "Zone 1 Recycling Operations",
+      "phone": "+91 98765 43211",
+      "createdAt": "2026-02-01T09:30:00.000Z"
+    },
+    {
+      "id": "USR-MVJQQW2L",
+      "email": "kiruthika@municipal.gov.in",
+      "name": "kiruthika",
+      "role": "Staff",
+      "department": "General Municipal Staff",
+      "phone": "",
+      "createdAt": "2026-10-22T16:14:04.509Z"
+    },
+    {
+      "id": "USR-MVJQUI95",
+      "email": "shana@environment.org",
+      "name": "shana",
+      "role": "Staff",
+      "department": "General Municipal Staff",
+      "phone": "",
+      "createdAt": "2026-10-22T16:16:53.225Z"
+    }
+  ],
+  "devices": [
+    {
+      "id": "ESP32-NODE-01",
+      "binId": "BIN-MUC-101",
+      "apiKey": "sec_node01_k9f8w2q1",
+      "status": "Offline",
+      "firmwareVersion": "v2.1.0-prod",
+      "batteryLevel": 85,
+      "rssi": -62,
+      "lastHeartbeat": "2026-10-22T16:14:38.012Z",
+      "ipAddress": "::1"
+    },
+    {
+      "id": "ESP32-NODE-02",
+      "binId": "BIN-MUC-102",
+      "apiKey": "sec_node02_m4x7v9p3",
+      "status": "Online",
+      "firmwareVersion": "v2.1.0-prod",
+      "batteryLevel": 85,
+      "rssi": -58,
+      "lastHeartbeat": "2026-10-22T16:14:45.199Z",
+      "ipAddress": "::1"
+    },
+    {
+      "id": "ESP32-NODE-03",
+      "binId": "BIN-MUC-103",
+      "apiKey": "sec_node03_j3b2c8z5",
+      "status": "Offline",
+      "firmwareVersion": "v2.1.0-prod",
+      "batteryLevel": 76,
+      "rssi": -65,
+      "lastHeartbeat": "2026-10-22T15:24:39.576Z",
+      "ipAddress": "192.168.1.103"
+    },
+    {
+      "id": "ESP32-NODE-04",
+      "binId": "BIN-MUC-104",
+      "apiKey": "sec_node04_p8l1n5t4",
+      "status": "Offline",
+      "firmwareVersion": "v2.0.4-legacy",
+      "batteryLevel": 14,
+      "rssi": -84,
+      "lastHeartbeat": "2026-10-22T14:39:39.576Z",
+      "ipAddress": "192.168.1.104"
+    },
+    {
+      "id": "ESP32-NODE-05",
+      "binId": null,
+      "apiKey": "sec_node05_spare_d9w3",
+      "status": "Unassigned",
+      "firmwareVersion": "v2.1.0-prod",
+      "batteryLevel": 100,
+      "rssi": -45,
+      "lastHeartbeat": "2026-10-22T15:24:39.576Z",
+      "ipAddress": "192.168.1.105"
+    }
+  ],
+  "bins": [
+    {
+      "id": "BIN-MUC-101",
+      "name": "Central Food Court - Organic Segregation",
+      "location": "Terminal 1 Plaza, North Wing",
+      "zone": "Commercial Zone A",
+      "category": "Organic",
+      "sensorId": "ESP32-NODE-01",
+      "dimensions": {
+        "heightCm": 100,
+        "sensorOffsetCm": 5
+      },
+      "currentFillPercentage": 24,
+      "currentDistanceCm": 81,
+      "status": "Offline",
+      "lastSensorUpdate": "2026-10-22T16:14:38.012Z",
+      "collectionStatus": "Ready",
+      "notes": "High organic throughput between 12:00 PM and 3:00 PM",
+      "createdAt": "2026-02-10T11:00:00.000Z",
+      "updatedAt": "2026-10-22T16:14:38.012Z"
+    },
+    {
+      "id": "BIN-MUC-102",
+      "name": "Retail Boulevard - Recyclable Plastics",
+      "location": "Market Walkway, Gate 3",
+      "zone": "Commercial Zone A",
+      "category": "Recyclable Plastic",
+      "sensorId": "ESP32-NODE-02",
+      "dimensions": {
+        "heightCm": 120,
+        "sensorOffsetCm": 6
+      },
+      "currentFillPercentage": 38,
+      "currentDistanceCm": 81,
+      "status": "Normal",
+      "lastSensorUpdate": "2026-10-22T16:14:45.199Z",
+      "collectionStatus": "Ready",
+      "notes": "PET bottles and clear polymers compaction station",
+      "createdAt": "2026-02-12T14:30:00.000Z",
+      "updatedAt": "2026-10-22T16:14:45.199Z"
+    },
+    {
+      "id": "BIN-MUC-103",
+      "name": "Logistics Depot - Corrugated Paper & Cardboard",
+      "location": "Freight Dock Bay 4",
+      "zone": "Industrial Hub B",
+      "category": "Paper & Cardboard",
+      "sensorId": "ESP32-NODE-03",
+      "dimensions": {
+        "heightCm": 150,
+        "sensorOffsetCm": 8
+      },
+      "currentFillPercentage": 0,
+      "currentDistanceCm": 150,
+      "status": "Normal",
+      "lastSensorUpdate": "2026-10-22T15:24:39.576Z",
+      "collectionStatus": "Ready",
+      "notes": "Exceeded 90% threshold. Compactor pickup queued.",
+      "createdAt": "2026-02-14T09:15:00.000Z",
+      "updatedAt": "2026-10-22T16:15:55.786Z"
+    },
+    {
+      "id": "BIN-MUC-104",
+      "name": "Electronics Scrap & Battery Safe Vault",
+      "location": "Municipal E-Waste Yard - Section 2",
+      "zone": "Industrial Hub B",
+      "category": "Hazardous/Electronic",
+      "sensorId": "ESP32-NODE-04",
+      "dimensions": {
+        "heightCm": 90,
+        "sensorOffsetCm": 5
+      },
+      "currentFillPercentage": 35,
+      "currentDistanceCm": 63,
+      "status": "Offline",
+      "lastSensorUpdate": "2026-10-22T14:39:39.576Z",
+      "collectionStatus": "Ready",
+      "notes": "Node telemetry silent for over 30 minutes. Inspection ticket issued.",
+      "createdAt": "2026-02-18T16:00:00.000Z",
+      "updatedAt": "2026-10-22T15:24:39.576Z"
+    },
+    {
+      "id": "BIN-MUC-105",
+      "name": "Glass & Beverage Cans Depository",
+      "location": "Marina Waterfront Promenade",
+      "zone": "Recreational Waterfront",
+      "category": "Metal & Glass",
+      "sensorId": null,
+      "dimensions": {
+        "heightCm": 100,
+        "sensorOffsetCm": 5
+      },
+      "currentFillPercentage": 20,
+      "currentDistanceCm": 85,
+      "status": "Normal",
+      "lastSensorUpdate": null,
+      "collectionStatus": "Ready",
+      "notes": "Hardware installation pending. Manual sensor unassigned.",
+      "createdAt": "2026-03-01T10:00:00.000Z",
+      "updatedAt": "2026-10-22T15:24:39.576Z"
+    }
+  ],
+  "readings": [
+    {
+      "id": "READ-1792685685205-286",
+      "binId": "BIN-MUC-102",
+      "deviceId": "ESP32-NODE-02",
+      "distanceCm": 81,
+      "fillPercentage": 38,
+      "rawDistanceCm": 81,
+      "timestamp": "2026-10-22T16:14:45.199Z",
+      "isSimulated": true
+    },
+    {
+      "id": "READ-1792685678017-241",
+      "binId": "BIN-MUC-101",
+      "deviceId": "ESP32-NODE-01",
+      "distanceCm": 81,
+      "fillPercentage": 24,
+      "rawDistanceCm": 81,
+      "timestamp": "2026-10-22T16:14:38.012Z",
+      "isSimulated": true
+    },
+    {
+      "id": "READ-1792685675300-745",
+      "binId": "BIN-MUC-101",
+      "deviceId": "ESP32-NODE-01",
+      "distanceCm": 81,
+      "fillPercentage": 24,
+      "rawDistanceCm": 81,
+      "timestamp": "2026-10-22T16:14:35.295Z",
+      "isSimulated": true
+    },
+    {
+      "id": "READ-1792682721045-895",
+      "binId": "BIN-MUC-101",
+      "deviceId": "ESP32-NODE-01",
+      "distanceCm": 75,
+      "fillPercentage": 30,
+      "rawDistanceCm": 75,
+      "timestamp": "2026-10-22T15:25:21.041Z",
+      "isSimulated": false
+    },
+    {
+      "id": "READ-1792682714125-903",
+      "binId": "BIN-MUC-101",
+      "deviceId": "ESP32-NODE-01",
+      "distanceCm": 24,
+      "fillPercentage": 81,
+      "rawDistanceCm": 24,
+      "timestamp": "2026-10-22T15:25:14.122Z",
+      "isSimulated": false
+    },
+    {
+      "id": "READ-1792682692815-598",
+      "binId": "BIN-MUC-101",
+      "deviceId": "ESP32-NODE-01",
+      "distanceCm": 25,
+      "fillPercentage": 80,
+      "rawDistanceCm": 25,
+      "timestamp": "2026-10-22T15:24:52.811Z",
+      "isSimulated": false
+    },
+    {
+      "id": "READ-001",
+      "binId": "BIN-MUC-101",
+      "deviceId": "ESP32-NODE-01",
+      "distanceCm": 63,
+      "fillPercentage": 42,
+      "rawDistanceCm": 63,
+      "timestamp": "2026-10-22T15:19:39.576Z",
+      "isSimulated": false
+    },
+    {
+      "id": "READ-002",
+      "binId": "BIN-MUC-102",
+      "deviceId": "ESP32-NODE-02",
+      "distanceCm": 32,
+      "fillPercentage": 78,
+      "rawDistanceCm": 32,
+      "timestamp": "2026-10-22T15:21:39.576Z",
+      "isSimulated": false
+    },
+    {
+      "id": "READ-003",
+      "binId": "BIN-MUC-103",
+      "deviceId": "ESP32-NODE-03",
+      "distanceCm": 17,
+      "fillPercentage": 94,
+      "rawDistanceCm": 17,
+      "timestamp": "2026-10-22T15:22:39.576Z",
+      "isSimulated": false
+    }
+  ],
+  "alerts": [
+    {
+      "id": "ALT-OFF-1793035752262",
+      "binId": "BIN-MUC-101",
+      "deviceId": "ESP32-NODE-01",
+      "binName": "Central Food Court - Organic Segregation",
+      "location": "Terminal 1 Plaza, North Wing",
+      "type": "OFFLINE",
+      "severity": "critical",
+      "message": "DEVICE OFFLINE: Sensor ESP32-NODE-01 attached to Central Food Court - Organic Segregation (BIN-MUC-101) has stopped transmitting telemetry.",
+      "fillPercentage": 24,
+      "status": "active",
+      "createdAt": "2026-10-26T17:29:12.262Z"
+    },
+    {
+      "id": "ALT-OFF-1792683639859",
+      "binId": "BIN-MUC-101",
+      "deviceId": "ESP32-NODE-01",
+      "binName": "Central Food Court - Organic Segregation",
+      "location": "Terminal 1 Plaza, North Wing",
+      "type": "OFFLINE",
+      "severity": "critical",
+      "message": "DEVICE OFFLINE: Sensor ESP32-NODE-01 attached to Central Food Court - Organic Segregation (BIN-MUC-101) has stopped transmitting telemetry.",
+      "fillPercentage": 30,
+      "status": "resolved",
+      "createdAt": "2026-10-22T15:40:39.859Z",
+      "resolvedAt": "2026-10-22T16:15:44.649Z"
+    },
+    {
+      "id": "ALT-OFF-1792683579852",
+      "binId": "BIN-MUC-103",
+      "deviceId": "ESP32-NODE-03",
+      "binName": "Logistics Depot - Corrugated Paper & Cardboard",
+      "location": "Freight Dock Bay 4",
+      "type": "OFFLINE",
+      "severity": "critical",
+      "message": "DEVICE OFFLINE: Sensor ESP32-NODE-03 attached to Logistics Depot - Corrugated Paper & Cardboard (BIN-MUC-103) has stopped transmitting telemetry.",
+      "fillPercentage": 94,
+      "status": "active",
+      "createdAt": "2026-10-22T15:39:39.852Z"
+    },
+    {
+      "id": "ALT-OFF-1792683579844",
+      "binId": "BIN-MUC-102",
+      "deviceId": "ESP32-NODE-02",
+      "binName": "Retail Boulevard - Recyclable Plastics",
+      "location": "Market Walkway, Gate 3",
+      "type": "OFFLINE",
+      "severity": "critical",
+      "message": "DEVICE OFFLINE: Sensor ESP32-NODE-02 attached to Retail Boulevard - Recyclable Plastics (BIN-MUC-102) has stopped transmitting telemetry.",
+      "fillPercentage": 78,
+      "status": "active",
+      "createdAt": "2026-10-22T15:39:39.844Z"
+    },
+    {
+      "id": "ALT-1792682692819-561",
+      "binId": "BIN-MUC-101",
+      "deviceId": "ESP32-NODE-01",
+      "binName": "Central Food Court - Organic Segregation",
+      "location": "Terminal 1 Plaza, North Wing",
+      "type": "ALMOST_FULL",
+      "severity": "warning",
+      "message": "CAPACITY WARNING: Central Food Court - Organic Segregation (BIN-MUC-101) reached 80%. Compactor collection route should be scheduled.",
+      "fillPercentage": 80,
+      "status": "resolved",
+      "createdAt": "2026-10-22T15:24:52.819Z",
+      "resolvedAt": "2026-10-22T15:25:21.048Z"
+    },
+    {
+      "id": "ALT-101",
+      "binId": "BIN-MUC-103",
+      "deviceId": "ESP32-NODE-03",
+      "binName": "Logistics Depot - Corrugated Paper & Cardboard",
+      "location": "Freight Dock Bay 4",
+      "type": "FULL",
+      "severity": "critical",
+      "message": "Bin capacity at 94%. Immediate collection dispatch required to avoid overflow.",
+      "fillPercentage": 94,
+      "status": "resolved",
+      "createdAt": "2026-10-22T15:09:39.576Z",
+      "resolvedAt": "2026-10-22T16:15:55.786Z"
+    },
+    {
+      "id": "ALT-102",
+      "binId": "BIN-MUC-102",
+      "deviceId": "ESP32-NODE-02",
+      "binName": "Retail Boulevard - Recyclable Plastics",
+      "location": "Market Walkway, Gate 3",
+      "type": "ALMOST_FULL",
+      "severity": "warning",
+      "message": "Bin capacity crossed 75% threshold (currently 78%). Plan route collection.",
+      "fillPercentage": 78,
+      "status": "resolved",
+      "createdAt": "2026-10-22T14:54:39.576Z",
+      "resolvedAt": "2026-10-22T16:14:45.212Z"
+    },
+    {
+      "id": "ALT-103",
+      "binId": "BIN-MUC-104",
+      "deviceId": "ESP32-NODE-04",
+      "binName": "Electronics Scrap & Battery Safe Vault",
+      "location": "Municipal E-Waste Yard - Section 2",
+      "type": "OFFLINE",
+      "severity": "critical",
+      "message": "Sensor ESP32-NODE-04 heartbeat timed out (last signal > 30 minutes ago).",
+      "fillPercentage": 35,
+      "status": "active",
+      "createdAt": "2026-10-22T15:04:39.576Z"
+    }
+  ],
+  "collections": [
+    {
+      "id": "COL-1792685755786",
+      "binId": "BIN-MUC-103",
+      "binName": "Logistics Depot - Corrugated Paper & Cardboard",
+      "wasteCategory": "Paper & Cardboard",
+      "collectedAt": "2026-10-22T16:15:55.786Z",
+      "collectedBy": "Manoj Kumar (Truck #TN-09-CW-4412)",
+      "fillPercentageBefore": 94,
+      "weightKgEstimated": 85,
+      "destinationFacility": "Central Materials Recovery Facility",
+      "notes": "Emptied and reset to baseline operational status"
+    },
+    {
+      "id": "COL-2026-001",
+      "binId": "BIN-MUC-101",
+      "binName": "Central Food Court - Organic Segregation",
+      "wasteCategory": "Organic",
+      "collectedAt": "2026-10-21T15:24:39.576Z",
+      "collectedBy": "Ramesh K. (Truck #TN-09-CW-1102)",
+      "fillPercentageBefore": 92,
+      "weightKgEstimated": 145,
+      "destinationFacility": "Municipal Biomethanation Plant #2",
+      "notes": "Cleared successfully. Bin washed and sanitized."
+    },
+    {
+      "id": "COL-2026-002",
+      "binId": "BIN-MUC-102",
+      "binName": "Retail Boulevard - Recyclable Plastics",
+      "wasteCategory": "Recyclable Plastic",
+      "collectedAt": "2026-10-20T15:24:39.576Z",
+      "collectedBy": "Suresh V. (Truck #TN-09-CW-1105)",
+      "fillPercentageBefore": 88,
+      "weightKgEstimated": 68,
+      "destinationFacility": "State Polymer Sorting & Baling Facility",
+      "notes": "Clean dry stream, high grade PET."
+    }
+  ]
+}
